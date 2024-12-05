@@ -1,0 +1,42 @@
+[18:37:39 INF] Sending POST request to http://localhost:5000/Api/UserDetails/AddNewAccount with content {"Username":"TestUser","Email":"TestUser@gmail.com","Password":"12345","Forename":"Test1","Surname":"Test1"}
+[18:37:40 INF] POST request to http://localhost:5000/Api/UserDetails/AddNewAccount succeeded
+[18:37:40 INF] {"message":"{\"Success\":true,\"RowsAffected\":-1}"}
+[18:37:43 INF] Sending GET request to http://localhost:5000/Api/UserDetails/CheckLogin?username=TestUser&email=TestUser%40gmail.com&password=12345
+[18:37:43 INF] GET request to http://localhost:5000/Api/UserDetails/CheckLogin?username=TestUser&email=TestUser%40gmail.com&password=12345 succeeded
+[18:37:43 INF] {"user_Id":"75f6a2cc-4ec5-458b-9313-d062bdb98bca"}
+[18:37:43 INF] Sending POST request to http://localhost:5003/Api/Booking/MakeBooking with content {"BookingDate":"2024-12-01T18:37:43.2970047+00:00","BookingTime":"12","BookingStatus":"B","NumOfShoes":3,"BookingCost":200.0,"LaneId":1,"UserId":"75f6a2cc-4ec5-458b-9313-d062bdb98bca"}
+[18:37:47 ERR] POST request to http://localhost:5003/Api/Booking/MakeBooking failed
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:5003)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at BowlingSYS_Tests.Httpclient.Httpclient.PostAsync(String endpoint, String content, String mediaType) in C:\Users\pawel\Documents\BowlingSys-All-Tests\BowlingSys-All-Tests\Api\Httpclient.cs:line 69
+[18:37:47 ERR] An error occurred while testing the CreateAccount API.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:5003)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at BowlingSYS_Tests.Httpclient.Httpclient.PostAsync(String endpoint, String content, String mediaType) in C:\Users\pawel\Documents\BowlingSys-All-Tests\BowlingSys-All-Tests\Api\Httpclient.cs:line 69
+   at BowlingSYS_Tests.Endtoend_Tests.TestFixtures.TestInsertBookingApi(Decimal bookingCost, String bookingTime, Int32 numOfShoes) in C:\Users\pawel\Documents\BowlingSys-All-Tests\BowlingSys-All-Tests\Endtoend-Tests\TestFixtures.cs:line 75
