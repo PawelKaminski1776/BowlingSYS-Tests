@@ -15,6 +15,11 @@ namespace BowlingSys_All_Tests.Endtoend_Tests
     {
         private TestFixtures fixture;
         private ILogger logger;
+        private string name = "PawelTest1";
+        private string password = "12345";
+        private string email = "PawelTest1@gmail.com";
+
+
 
         [SetUp]
         public void SetUp()
@@ -28,17 +33,45 @@ namespace BowlingSys_All_Tests.Endtoend_Tests
         [Order(0)]
         public async Task InsertUserApi()
         {
-            string name = "PawelTest1";
-            string password = "12345";
-            string email = "PawelTest1@gmail.com";
-
 
             await fixture.TestInsertUserApi(name, email, password);
+        }
+
+        [Test]
+        [Order(1)]
+        public async Task TestLoginApiTest()
+        {
             await fixture.TestLoginApiTest(name, email, password);
+        }
+
+        [Test]
+        [Order(2)]
+        public async Task TestInsertBookingApi()
+        {
             await fixture.TestInsertBookingApi(200, "12", 3);
+        }
+
+
+        [Test]
+        [Order(3)]
+        public async Task TestLoginUI()
+        {
             fixture.TestLogin(email, password);
+        }
+
+        [Test]
+        [Order(4)]
+        public async Task TestBookingUI()
+        {
             fixture.TestBookingsLoad();
+        }
+
+
+        [OneTimeTearDown]
+        public async Task CleanUp()
+        {
             fixture.Quit();
         }
+
     }
 }

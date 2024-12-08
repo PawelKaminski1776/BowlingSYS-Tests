@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BowlingSys-All-Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+709be18867d407a574e4078bb72f1f87e5199433")]
 [assembly: System.Reflection.AssemblyProductAttribute("BowlingSys-All-Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BowlingSys-All-Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

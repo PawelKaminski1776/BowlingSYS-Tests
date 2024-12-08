@@ -103,3 +103,4 @@ C:\Users\pawel\Documents\BowlingSys-All-Tests\BowlingSys-All-Tests\obj\Debug\net
 C:\Users\pawel\Documents\BowlingSys-All-Tests\BowlingSys-All-Tests\obj\Debug\net8.0\BowlingSys-All-Tests.pdb
 C:\Users\pawel\Documents\BowlingSys-All-Tests\BowlingSys-All-Tests\obj\Debug\net8.0\BowlingSys-All-Tests.genruntimeconfig.cache
 C:\Users\pawel\Documents\BowlingSys-All-Tests\BowlingSys-All-Tests\obj\Debug\net8.0\ref\BowlingSys-All-Tests.dll
+C:\Users\pawel\Documents\BowlingSys-All-Tests\BowlingSys-All-Tests\obj\Debug\net8.0\BowlingSys-All-Tests.sourcelink.json

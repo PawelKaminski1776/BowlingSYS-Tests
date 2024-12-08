@@ -97,7 +97,7 @@ namespace BowlingSYS_Tests.Webdriver
                 catch (Exception e)
                 {
                     retries++;
-                    Thread.Sleep(500);
+                    Thread.Sleep(1500);
 
                     if (retries == 5)
                     {

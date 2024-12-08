@@ -18,6 +18,7 @@ namespace BowlingSYS_Tests.Endtoend_Tests
         {
             logger = LoggerConfig.ConfigureLogger();
             _logger = logger;
+            webdriver = new Webdriver.Webdriver(_logger);
         }
 
         public async Task TestLoginApiTest(string? username, string? email, string password)
